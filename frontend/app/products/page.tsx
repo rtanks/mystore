@@ -12,7 +12,7 @@ type ProductType = {
     category: string;
 }
 export default async function Products() {
-    const response = await fetch(`${process.env.BASE_URL_CURRENT}/api/products`);
+    const response = await fetch(`process.env.NEXT_PUBLIC_API_BASE_URL}/products`);
     const productsList: ProductType[] = await response.json()
     
     console.log(productsList)
