@@ -1,0 +1,73 @@
+# ----------------------------
+# Global ignores
+# ----------------------------
+node_modules/
+dist/
+build/
+.tmp/
+.cache/
+.DS_Store
+.env
+.env.local
+.env.*.local
+.vscode/
+.idea/
+*.log
+*.lock
+*.pid
+*.seed
+*.tgz
+
+# Ignore coverage & testing
+coverage/
+.nyc_output/
+jest-test-results.json
+
+# Ignore TypeScript build outputs
+*.tsbuildinfo
+
+# Ignore OS-specific files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# ----------------------------
+# Next.js (frontend)
+# ----------------------------
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/node_modules/
+frontend/.DS_Store
+
+# ----------------------------
+# Nest.js (backend)
+# ----------------------------
+backend/dist/
+backend/node_modules/
+backend/.env
+backend/.env.local
+backend/.DS_Store
+
+# ----------------------------
+# Logs
+# ----------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------
+# IDE and tooling
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
