@@ -12,7 +12,7 @@ type ProductType = {
     category: string;
 }
 export default async function Products() {
-    const response = await fetch(`process.env.NEXT_PUBLIC_API_BASE_URL}/products`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/products`);
     const productsList: ProductType[] = await response.json()
     
     console.log(productsList)
@@ -20,7 +20,7 @@ export default async function Products() {
         <div className="w-full h-screen overflow-y-scroll flex flex-col items-center md:items-start md:justify-center sm:flex-row sm:flex-wrap gap-0.5 px-5 mb-10">
             {
                 productsList.map(product => (
-                    <Link href={`products/${product.id}`} key={product.id} className="w-68 h-96 p-3 flex flex-col gap-3 bg-white shadow-sm">
+                    <Link href={`products/${product.id}`} key={product.id} className="w-68 h-96 p-3 flex flex-col shrink-0 gap-3 bg-white shadow-sm">
                       <img src={product.imageUrl} className="w-full h-2/4"/>
                       <div className="w-full h-2/4 flex flex-col gap-1 relative">
                         <div role="title" className="font-bold text-md line-clamp-2">{product.title}</div>

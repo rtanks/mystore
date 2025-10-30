@@ -26,7 +26,7 @@ export default async function Product(props:{
     }
 }) {
     const {id} = await props.params;
-    const response = await fetch(`${process.env.BASE_URL_CURRENT}/api/products/${id}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/products/${id}`);
     const {product} = await response.json();
     
     console.log(product)
