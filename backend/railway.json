@@ -1,0 +1,23 @@
+{
+  "name": "backend-service",
+  "rootDirectory": "backend",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm run build",
+    "startCommand": "npm run start:prod"
+  },
+  "watchPaths": [
+    "backend/**"
+  ],
+  "restartPolicy": "always",
+  "serverless": false,
+  "healthcheckPath": "/health",
+  "teardown": true,
+  "waitForCI": false,
+  "env": {
+    "MONGODB_URI": "your-mongodb-uri",
+    "JWT_SECRET": "your-jwt-secret",
+    "FRONTEND_URL": "https://your-frontend.vercel.app",
+    "NODE_ENV": "production"
+  }
+}
