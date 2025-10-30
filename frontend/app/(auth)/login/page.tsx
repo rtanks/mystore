@@ -42,7 +42,7 @@ export default function Login() {
        console.log(result._doc._id)
        Cookies.set("userId", result._doc._id)
        dispatch(getUserId({id: result._doc._id}))
-       route.push('/products')
+       route.push('/cart')
     }
     return(
         <div className="w-full h-[85vh] flex justify-center items-center overflow-y-scroll">
