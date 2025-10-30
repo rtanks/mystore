@@ -12,9 +12,9 @@ async function bootstrap() {
 
   app.enableCors({origin: true})
 
-  //this part for local
-  // const port = process.env.PORT || 5000
-  // await app.listen(port);
-  // console.log(`Backend listening on http://localhost:${port}`)
+  
+  const port = process.env.PORT || 5000
+  await app.listen(port);
+  console.log(`Backend listening on http://localhost:${port}`)
 }
 bootstrap();
