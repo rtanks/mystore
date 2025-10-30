@@ -38,7 +38,7 @@ export default function Cart() {
             {
                 cartItems.length == 0 ? "" : (
                     cartItems.map(item => (
-                        <div key={item._id} className="w-96 h-max flex flex-row items-center gap-3 shadow rounded-lg p-1">
+                        <div key={item._id} className="w-full md:w-96 h-max flex flex-row items-center gap-3 shadow rounded-lg p-1">
                             <img src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${item.image}`} alt={item.name} className="w-32 h-20"/>
                             <div className="w-3/5 flex flex-col gap-1">
                                 <div className="w-full h-max flex flex-row items-center justify-between">
